@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import Feedback from "../App/Feedback";
 import List from "../App/List";
@@ -13,6 +13,7 @@ const Routes = () => {
             <Route path="/specs" component={Specs} />
             <Route path="/list" component={List} />
             <Route path="/" component={Home} exact />
+            <Redirect to="/" />
         </Switch>
     );
 };
