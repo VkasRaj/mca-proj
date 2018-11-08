@@ -6,7 +6,7 @@ import SelectControl from "./SelectControl";
 import LoadingButton from "./LoadingButton";
 import validate from "./validation";
 
-class Signup extends PureComponent {
+class FeedbackForm extends PureComponent {
     render() {
         const { onSubmit } = this.props;
         return (
@@ -18,7 +18,6 @@ class Signup extends PureComponent {
                 initialValues={{
                     name: "",
                     email: "",
-                    password: "",
                     model: "---",
                     feedback: ""
                 }}
@@ -70,4 +69,4 @@ class Signup extends PureComponent {
     }
 }
 
-export default Signup;
+export default FeedbackForm;

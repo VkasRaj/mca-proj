@@ -23,10 +23,13 @@ const validate = values => {
     }
 
     // password validation
-    if (!values.password) {
-        errors.password = "Required";
-    } else if (values.password.length < 6) {
-        errors.password = "Must be 6 characters or more";
+    if (!values.model || values.model === "---") {
+        errors.model = "Required";
+    }
+
+    // password validation
+    if (!values.feedback) {
+        errors.feedback = "Required";
     }
 
     return errors;
